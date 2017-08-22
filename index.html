@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>lightbox - prettyPhoto - 第五像素 - fivepx.net - www.fivepx.net</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-1.12.1.min.js"></script>
+		<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+		<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css" media="screen">
+			* { margin: 0; padding: 0; }
+			body {
+				background: #282828;
+				font:12px/22px arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif; 
+				color:#333;
+			}			
+			h1 {
+				font-family: Georgia; 
+				font-style: italic; 
+				margin-bottom: 10px; 
+			}			
+			h2 {
+				font-family: Georgia;
+				font-style: italic;
+				margin: 25px 0 5px 0;
+			}			
+			p { 
+				font-size: 1.2em; 
+			}			
+			ul li { 
+				display: inline; 
+			}			
+			.wide {
+				border-bottom: 1px #000 solid;
+				width: 4000px;
+			}			
+			.fleft {
+				float: left; 
+				margin: 0 20px 0 0; 
+			}			
+			.cboth { 
+				clear: both;
+			}			
+			#main {
+				background: #fff;
+				margin: 0 auto;
+				padding: 30px;
+				width: 1000px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<h1>prettyPhoto</h1>
+			<h2>画廊</h2>
+			<ul class="gallery clearfix">
+				<li>
+					<a href="images/fullscreen/1.JPG?lol=lol" rel="prettyPhoto[gallery1]" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures.">
+						<img src="images/thumbnails/t_1.jpg" width="60" height="60" alt="Red round shape" />
+					</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/2.jpg" rel="prettyPhoto[gallery1]">
+						<img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" />
+					</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/3.jpg" rel="prettyPhoto[gallery1]">
+						<img src="images/thumbnails/t_3.jpg" width="60" height="60" alt="Fire!" />
+					</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/4.jpg" rel="prettyPhoto[gallery1]">
+						<img src="images/thumbnails/t_4.jpg" width="60" height="60" alt="Rock climbing" />
+					</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/5.jpg" rel="prettyPhoto[gallery1]">
+						<img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="Fly kite, fly!" />
+					</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/6.jpg" rel="prettyPhoto[gallery1]">
+						<img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" />
+					</a>
+				</li>
+			</ul>
+
+			<h2>画廊 2</h2>
+			<ul class="gallery clearfix">
+				<li>
+					<a href="images/fullscreen/3.jpg" rel="prettyPhoto[gallery2]" title="How is the description on that one? How is the description on that one? How is the description on that one? ">
+						<img src="images/thumbnails/t_3.jpg" width="60" height="60" alt="This is a pretty long title" />
+					</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/4.jpg" rel="prettyPhoto[gallery2]" title="Description on a single line.">
+						<img src="images/thumbnails/t_4.jpg" width="60" height="60" alt="" />
+					</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/5.jpg" rel="prettyPhoto[gallery2]">
+						<img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="" />
+					</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/1.jpg" rel="prettyPhoto[gallery2]">
+						<img src="images/thumbnails/t_1.jpg" width="60" height="60" alt="" />
+					</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/2.jpg" rel="prettyPhoto[gallery2]">
+						<img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="" />
+					</a>
+				</li>
+			</ul>
+
+			<h2>API调用</h2>
+			<script type="text/javascript" charset="utf-8">
+				api_gallery=['images/fullscreen/1.JPG','images/fullscreen/2.jpg','images/fullscreen/3.JPG'];
+				api_titles=['API Call Image 1','API Call Image 2','API Call Image 3'];
+				api_descriptions=['Description 1','Description 2','Description 3'];
+			</script>
+			<p><a href="#" onclick="$.prettyPhoto.open(api_gallery,api_titles,api_descriptions); return false">API call</a></p>
+
+			<h2>单独的图像</h2>
+			<ul class="gallery clearfix">
+				<li>
+					<a href="images/fullscreen/2.jpg" rel="prettyPhoto" title="&lt;a href=&#x27;http://www.google.ca&#x27; target=&#x27;_blank&#x27; &gt;This will open Google.com in a new window&lt;/a&gt;">
+						<img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Picture alone 1" /></a>
+				</li>
+			</ul>
+			<div class="fleft">
+				<h2>Flash</h2>
+				<ul class="gallery clearfix">
+					<li>
+						<a href="http://player.youku.com/player.php/Type/Folder/Fid/18801064/Ob/1/sid/XODI1NTA3NDky/v.swf?width=792&amp;height=294" rel="prettyPhoto[flash]" title="Flash 10 demo">
+							<img src="images/thumbnails/flash-logo.png" width="60" alt="Flash 10 demo" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="fleft">
+				<h2>YouTube</h2>
+				<ul class="gallery clearfix">
+					<li>
+						<a href="http://player.youku.com/player.php/Type/Folder/Fid/18801064/Ob/1/sid/XODI1NTA3NDky/v.swf?v=kh29_SERH0Y?rel=0" rel="prettyPhoto" title="YouTube demo"><img src="images/thumbnails/flash-logo.png" width="60" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="http://player.youku.com/player.php/Type/Folder/Fid/18801064/Ob/1/sid/XODI1NTA3NDky/v.swf?rel=0" rel="prettyPhoto" title="YouTube demo"><img src="images/thumbnails/flash-logo.png" width="60" alt="" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="fleft">
+				<h2>Vimeo</h2>
+				<ul class="gallery clearfix">
+					<li>
+						<a href="http://player.youku.com/player.php/Type/Folder/Fid/18801064/Ob/1/sid/XODI1NTA3NDky/v.swf&width=700" rel="prettyPhoto" title="Vimeo video">
+							<img src="images/thumbnails/flash-logo.png" width="60" alt="VIMEO!" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+			<br class="cboth" />
+	
+			<h2>Movies (.mov)</h2>
+			<ul class="gallery clearfix">
+				<li>
+					<a href="http://artapp-dev-bucket.oss-cn-beijing.aliyuncs.com/music_essay/D9A0E12C-853F-44D3-893A-409C4D8E7A9171.mp4?width=640&height=272" rel="prettyPhoto[movies]" title="Tron!">
+						<img src="images/thumbnails/quicktime-logo.gif" alt="Tron teaser" width="60" />
+					</a>
+				</li>
+				<li>
+					<a href="http://artapp-dev-bucket.oss-cn-beijing.aliyuncs.com/music_essay/D9A0E12C-853F-44D3-893A-409C4D8E7A9171.mp4?width=640&height=304" rel="prettyPhoto[movies]" title="The Karate Kid">
+						<img src="images/thumbnails/quicktime-logo.gif" alt="The Karate Kid" width="60" />
+					</a>
+				</li>
+				<li>
+					<a href="http://artapp-dev-bucket.oss-cn-beijing.aliyuncs.com/music_essay/D9A0E12C-853F-44D3-893A-409C4D8E7A9171.mp4?width=640&height=272" rel="prettyPhoto[movies]" title="Shutter Island">
+						<img src="images/thumbnails/quicktime-logo.gif" alt="Shutter Island" width="60" />
+					</a>
+				</li>
+			</ul>
+	
+			<h2>Movies (.mov) alone</h2>
+			<ul class="gallery clearfix">
+				<li>
+					<a href="http://artapp-dev-bucket.oss-cn-beijing.aliyuncs.com/music_essay/D9A0E12C-853F-44D3-893A-409C4D8E7A9171.mp4?width=640&height=272" rel="prettyPhoto" title="Tron!">
+						<img src="images/thumbnails/quicktime-logo.gif" alt="Tron teaser" width="60" />
+					</a>
+				</li>
+			</ul>
+	
+			<h2>不寻常的尺寸</h2>
+			<ul class="gallery clearfix">
+				<li>
+					<a href="images/fullscreen/wide.gif" rel="prettyPhoto[unusual]">Wide image (3000 x 1500)</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/high.gif" rel="prettyPhoto[unusual]">High image (1500 x 3000)</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/huge.gif" rel="prettyPhoto[unusual]">Huge image (3000 x 3000)</a>
+				</li>
+			</ul>
+	
+			<h2>Iframe</h2>
+			<ul class="gallery clearfix">
+				<li>
+					<a href="http://www.fivepx.net/upload/2014-09/17/tymsg.jpg" rel="prettyPhoto[iframe]">Google.ca</a>
+				</li>
+				<li>
+					<a href="http://www.fivepx.net?iframe=true&amp;width=1200&amp;height=500" rel="prettyPhoto[iframe]">Facebook</a>
+				</li>
+				<li>
+					<a href="http://www.fivepx.net?iframe=true&amp;width=300&amp;height=200" rel="prettyPhoto[iframe]">My site</a>
+				</li>
+			</ul>
+	
+			<h2>AJAX</h2>
+			<ul class="gallery clearfix">
+				<li>
+					<a href="xhr_response.html?ajax=true&amp;width=400&amp;height=160" rel="prettyPhoto[ajax]">Sample AJAX</a>
+				</li>
+			</ul>
+	
+			<h2>混合画廊</h2>
+			<ul class="gallery clearfix">
+				<li>
+					<a href="http://www.fivepx.net?iframe=true&amp;width=1000&amp;height=500" rel="prettyPhoto[mixed]">Google.ca</a>
+				</li>
+				<li>
+					<a href="http://player.youku.com/player.php/Type/Folder/Fid/18801064/Ob/1/sid/XODI1NTA3NDky/v.swf?width=640&height=272" rel="prettyPhoto[mixed]" title="Tron!">
+						<img src="images/thumbnails/quicktime-logo.gif" alt="Tron teaser" width="60" />
+					</a>
+				</li>
+				<li>
+					<a href="images/fullscreen/5.jpg" rel="prettyPhoto[mixed]">
+						<img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="" />
+					</a>
+				</li>
+				<li>
+					<a href="http://player.youku.com/player.php/Type/Folder/Fid/18801064/Ob/1/sid/XODI1NTA3NDky/v.swf?width=792&amp;height=294" rel="prettyPhoto[mixed]" title="Flash 10 demo">
+						<img src="images/thumbnails/flash-logo.png" width="60" alt="Flash 10 demo" />
+					</a>
+				</li>
+			</ul>
+	
+			<h2>在线内容</h2>
+			<ul class="gallery clearfix">
+				<li>
+					<a href="#inline_demo" rel="prettyPhoto[inline]">Inline content 1</a>
+				</li>
+				<li>
+					<a href="#inline_demo2" rel="prettyPhoto[inline]">Inline content 2</a>
+				</li>
+				<li>
+					<a href="#inline_demo3" rel="prettyPhoto[inline]">Inline content 3</a>
+				</li>
+			</ul>
+			<div id="inline_demo" style="display:none;">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div id="inline_demo2" style="display:none;">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div id="inline_demo3" style="display:none;">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p><img src="images/fullscreen/2.jpg" /></p>
+			</div>
+	
+			<h2>自定义内容</h2>
+			<ul id="custom_content" class="gallery clearfix">
+				<li>
+				<a href="#?custom=true&width=260&height=270" rel="prettyPhoto">Google Maps</a>
+				</li>
+				<li>
+					<a href="#?custom=true&width=260&height=400" rel="prettyPhoto">Ads</a>
+				</li>
+			</ul>
+			
+			<br /><br />
+			
+	
+			<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({
+					animation_speed:'normal',
+					theme:'light_square',
+					slideshow:3000, 
+					autoplay_slideshow: true
+				});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({
+					animation_speed:'fast',
+					slideshow:10000, 
+					hideflash: true
+				});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+			</script>
+	
+	
+			<!-- BuySellAds.com Ad Code -->
+			<style type="text/css" media="screen">
+				.bsap a { float: left; }
+			</style>
+			<script type="text/javascript">
+			(function(){
+			  var bsa = document.createElement('script');
+			     bsa.type = 'text/javascript';
+			     bsa.async = true;
+			     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+			  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+			})();
+			</script>
+			<!-- END BuySellAds.com Ad Code -->
+	</div>
+	</body>
+</html>
